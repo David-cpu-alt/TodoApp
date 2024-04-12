@@ -19,10 +19,17 @@ const Home = () => {
     const [newToDos, setNewToDos] = useState("")
 
     const handleaddToDos = () => {
-        let freshTodo = { id: Math.random(), todo: newToDos, checked: false }
-        console.log('added todo', freshTodo)
-        dispatch(addToDos(freshTodo)),
-            setNewToDos("")
+
+        if (newToDos !== "") {
+            let freshTodo = { id: Math.random(), todo: newToDos, checked: false }
+            console.log('added todo', freshTodo)
+            dispatch(addToDos(freshTodo)),
+                setNewToDos("")
+        } else {
+            console.log("please enter your todos")
+        }
+
+
     }
 
     const handledeleteToDos = (todoId) => {
