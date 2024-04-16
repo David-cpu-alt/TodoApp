@@ -2,6 +2,7 @@ import { ADD_TO_DOS } from "../constant/constant";
 import { MARK_TO_DOS } from "../constant/constant";
 import { DELETE_TO_DOS } from "../constant/constant";
 import { DELETE_ALL_TO_DOS } from "../constant/constant";
+import { SAVE_NAME } from "../constant/constant";
 
 // action creator 
 
@@ -30,5 +31,12 @@ export const deleteAllToDos = (todos) => {
     return {
         type: DELETE_ALL_TO_DOS,
         todos
+    }
+}
+
+export const saveName = () => {
+    return {
+        type: SAVE_NAME,
+        payload: name
     }
 }

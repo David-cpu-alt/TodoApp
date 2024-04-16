@@ -4,7 +4,7 @@ import Forminput from '../../components/input/Forminput';
 import { useDispatch, useSelector } from 'react-redux'
 import icons from '../../constants/icons';
 import images from '../../constants/images';
-import { SIZES, FONTS } from '../../constants/theme';
+import { SIZES, FONTS, COLORS } from '../../constants/theme';
 import { addToDos, deleteAllToDos } from '../../redux/action/toDoActions';
 import { deleteToDos } from '../../redux/action/toDoActions';
 import { markToDos } from '../../redux/action/toDoActions';
@@ -58,7 +58,7 @@ const Home = () => {
                 showsVerticalScrollIndicator={false}
                 renderItem={({ item, index }) => {
                     return (
-                        <View style={{ padding: SIZES.h2 * 0.15, marginVertical: SIZES.h5, justifyContent: "center", borderRadius: SIZES.base, elevation: SIZES.base, backgroundColor: "white" }}>
+                        <View style={{ padding: SIZES.h2 * 0.15, marginVertical: SIZES.h5, justifyContent: "center", borderRadius: SIZES.base, elevation: SIZES.base, backgroundColor: COLORS.white }}>
                             <View style={{ flexDirection: "row", alignItems: "center", justifyContent: 'space-between', paddingHorizontal: SIZES.h5 }}>
                                 <Text style={{ ...FONTS.body4, textDecorationLine: item.checked ? 'line-through' : 'none' }}>{item?.todo}</Text>
                                 <View style={{ flexDirection: "row", }}>

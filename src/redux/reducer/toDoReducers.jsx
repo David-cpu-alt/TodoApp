@@ -2,6 +2,7 @@ import { ADD_TO_DOS } from "../constant/constant"
 import { DELETE_TO_DOS } from "../constant/constant"
 import { MARK_TO_DOS } from "../constant/constant"
 import { DELETE_ALL_TO_DOS } from "../constant/constant"
+import { SAVE_NAME } from "../constant/constant"
 
 
 const intialstate = {
@@ -35,6 +36,12 @@ export const toDoReducer = (state = intialstate, action) => {
                 ...state,
                 todos: []
             }
+            break;
+        case SAVE_NAME:
+            return {
+                ...state,
+            }
+
         default:
             return state;
     }
