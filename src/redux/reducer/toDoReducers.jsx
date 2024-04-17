@@ -5,11 +5,16 @@ import { DELETE_ALL_TO_DOS } from "../constant/constant"
 import { SAVE_NAME } from "../constant/constant"
 
 
-const intialstate = {
-    todos: []
+const intialNoteState = {
+    todos: [],
+
 }
 
-export const toDoReducer = (state = intialstate, action) => {
+const initialNameState = {
+    name: ""
+}
+
+export const noteReducer = (state = intialNoteState, action) => {
     switch (action.type) {
         case ADD_TO_DOS:
             return {
@@ -36,13 +41,21 @@ export const toDoReducer = (state = intialstate, action) => {
                 ...state,
                 todos: []
             }
-            break;
-        case SAVE_NAME:
-            return {
-                ...state,
-            }
+
 
         default:
             return state;
     }
+}
+
+export const nameReducer = (state = initialNameState, action) => {
+    switch (action.type) {
+        case SAVE_NAME: {
+            return {
+                ...state,
+                name: action.name,
+            }
+        }
+    }
+
 }

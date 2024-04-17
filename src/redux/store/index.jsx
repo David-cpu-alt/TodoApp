@@ -1,9 +1,14 @@
-import { createStore, compose, applyMiddleware } from "redux";
-import { toDoReducer } from "../reducer/toDoReducers";
+import { createStore, compose, applyMiddleware, combineReducers } from "redux";
+import { nameReducer, toDoReducer } from "../reducer/toDoReducers";
 
+
+const rootReducer = combineReducers({
+    todos: toDoReducer,
+    name: nameReducer
+})
 
 const reduxStore = createStore(
-    toDoReducer
+    rootReducer
 )
 
 
