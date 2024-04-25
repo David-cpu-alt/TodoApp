@@ -34,11 +34,11 @@ export const deleteAllToDos = (todos) => {
     }
 }
 
-export const SAVE_NAME = () => { }
+// export const SAVE_NAME = () => { }
 
-export const saveName = (name) => {
-    return {
-        type: SAVE_NAME,
-        payload: name
-    }
-}
+// export const saveName = (name) => {
+//     return {
+//         type: SAVE_NAME,
+//         payload: name
+//     }
+// }

@@ -1,14 +1,11 @@
 import { createStore, compose, applyMiddleware, combineReducers } from "redux";
-import { nameReducer, toDoReducer } from "../reducer/toDoReducers";
+import { nameReducer, noteReducer, } from "../reducer/toDoReducers";
 
 
-const rootReducer = combineReducers({
-    todos: toDoReducer,
-    name: nameReducer
-})
+
 
 const reduxStore = createStore(
-    rootReducer
+    noteReducer
 )
 
 
@@ -36,5 +33,5 @@ const handledeleteAllToDos = (store) => {
 reduxStore.subscribe(() => handleaddToDos(reduxStore))
 reduxStore.subscribe(() => handledeleteToDos(reduxStore))
 reduxStore.subscribe(() => handlemarkToDos(reduxStore))
-reduxStore.subscribe(() => handledeleteAllToDos)
+reduxStore.subscribe(() => handledeleteAllToDos(reduxStore))
 export default reduxStore;

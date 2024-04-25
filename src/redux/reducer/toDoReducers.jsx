@@ -10,9 +10,9 @@ const intialNoteState = {
 
 }
 
-const initialNameState = {
-    name: ""
-}
+// const initialNameState = {
+//     name: ""
+// }
 
 export const noteReducer = (state = intialNoteState, action) => {
     switch (action.type) {
@@ -48,14 +48,14 @@ export const noteReducer = (state = intialNoteState, action) => {
     }
 }
 
-export const nameReducer = (state = initialNameState, action) => {
-    switch (action.type) {
-        case SAVE_NAME: {
-            return {
-                ...state,
-                name: action.name,
-            }
-        }
-    }
+// export const nameReducer = (state = initialNameState, action) => {
+//     switch (action.type) {
+//         case SAVE_NAME: {
+//             return {
+//                 ...state,
+//                 name: action.name,
+//             }
+//         }
+//     }
 
-}
+// }
